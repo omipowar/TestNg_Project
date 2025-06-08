@@ -8,9 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.SkipException;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import swaglab_pages.LoginPage;
-
+@Listeners(Listener.class)
 public class LoginTest extends BaseClass {
 
 	@Test(priority = 0)
@@ -27,7 +28,7 @@ public class LoginTest extends BaseClass {
 		LoginPage lp = new LoginPage();
 		lp.LoginFunction("standard_user", "secret_sauce");
 		WebElement ProductTitle = driver.findElement(By.className("title"));
-		Assert.assertEquals(ProductTitle.getText(), "Products", "Titles match!");
+		Assert.assertEquals(ProductTitle.getText(), "Products");
 	}
 
 	@Test(priority = 1)

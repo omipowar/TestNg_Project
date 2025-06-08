@@ -9,6 +9,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -23,7 +25,20 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void SetUp() {
-		
+		// Browser Parameterization
+
+
+
+				String BrowserName = System.getProperty("Browser");
+				
+				if(BrowserName.equalsIgnoreCase("firefox")) {
+					driver = new FirefoxDriver();
+				}else {
+					driver = new ChromeDriver();
+				}
+				
+
+
 		driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().window().maximize();

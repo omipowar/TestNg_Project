@@ -5,12 +5,15 @@
     <classes>
       <class name="swaglab_test.LoginTest">
         <methods>
+          <include name="LoginFailureTestFromProperties"/>
           <include name="SetUp"/>
           <include name="LoginFailureTestFromExcel"/>
           <include name="LoginSucessTest"/>
           <include name="CloseExcel"/>
           <include name="TearDown"/>
           <include name="SetUpExcel"/>
+          <include name="LockedUserFailureTest"/>
+          <include name="LoginFailureTest"/>
         </methods>
       </class> <!-- swaglab_test.LoginTest -->
     </classes>
