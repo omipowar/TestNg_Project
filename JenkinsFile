@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/nicks204/TestNgProject_June25.git'
+                git 'https://github.com/omipowar/TestNg_Project.git'
             }
         }
         
