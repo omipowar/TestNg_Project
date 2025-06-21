@@ -40,13 +40,13 @@ public class BaseClass {
 					driver = new FirefoxDriver();
 				}else if(BrowserName.equalsIgnoreCase("firefox_grid")) {
 					cap.setBrowserName("firefox");
-					cap.setPlatform(Platform.WIN11);
+					cap.setPlatform(Platform.WIN10);
 					URL HubURL = new URL("http://localhost:4444");
 					driver = new RemoteWebDriver(HubURL,cap);
 
 				}else if(BrowserName.equalsIgnoreCase("chrome_grid")) {
 					cap.setBrowserName("chrome");
-					cap.setPlatform(Platform.WIN11);
+					cap.setPlatform(Platform.WIN10);
 					URL HubURL = new URL("http://localhost:4444");
 					driver = new RemoteWebDriver(HubURL,cap);
 				}else {
