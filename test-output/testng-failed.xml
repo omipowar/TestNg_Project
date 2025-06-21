@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Simplilearn]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="SmokeTest(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="swaglab_test.LoginTest">
         <methods>
-          <include name="LoginFailureTestFromProperties"/>
           <include name="SetUp"/>
-          <include name="LoginFailureTestFromExcel"/>
           <include name="LoginSucessTest"/>
           <include name="CloseExcel"/>
           <include name="TearDown"/>
           <include name="SetUpExcel"/>
-          <include name="LockedUserFailureTest"/>
-          <include name="LoginFailureTest"/>
         </methods>
       </class> <!-- swaglab_test.LoginTest -->
     </classes>
-  </test> <!-- SmokeTest(failed) -->
-</suite> <!-- Failed suite [Simplilearn] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
